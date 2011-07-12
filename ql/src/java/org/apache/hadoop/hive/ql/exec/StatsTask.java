@@ -269,7 +269,7 @@ public class StatsTask extends Task<StatsWork> implements Serializable {
       if (partitions == null) {
         // non-partitioned tables:
 
-        Path tablePath = wh.getDefaultTablePath(table.getDbName(), table.getTableName());
+        Path tablePath = wh.getTablePath(db.getDatabase(table.getDbName()), table.getTableName());
         fileSys = tablePath.getFileSystem(conf);
         fileStatus = Utilities.getFileStatusRecurse(tablePath, 1, fileSys);
         tblStats.setNumFiles(fileStatus.length);

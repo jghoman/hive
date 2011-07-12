@@ -1,0 +1,136 @@
+PREHOOK: query: create database db1
+PREHOOK: type: CREATEDATABASE
+POSTHOOK: query: create database db1
+POSTHOOK: type: CREATEDATABASE
+PREHOOK: query: describe database extended db1
+PREHOOK: type: DESCDATABASE
+POSTHOOK: query: describe database extended db1
+POSTHOOK: type: DESCDATABASE
+db1		pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db1.db	
+PREHOOK: query: use db1
+PREHOOK: type: SWITCHDATABASE
+POSTHOOK: query: use db1
+POSTHOOK: type: SWITCHDATABASE
+PREHOOK: query: create table table_db1 (name string, value int)
+PREHOOK: type: CREATETABLE
+POSTHOOK: query: create table table_db1 (name string, value int)
+POSTHOOK: type: CREATETABLE
+POSTHOOK: Output: db1@table_db1
+PREHOOK: query: describe formatted table_db1
+PREHOOK: type: DESCTABLE
+POSTHOOK: query: describe formatted table_db1
+POSTHOOK: type: DESCTABLE
+# col_name            	data_type           	comment             
+	 	 
+name                	string              	None                
+value               	int                 	None                
+	 	 
+# Detailed Table Information	 	 
+Database:           	db1                 	 
+Owner:              	jhoman              	 
+CreateTime:         	Tue Jul 12 15:52:13 PDT 2011	 
+LastAccessTime:     	UNKNOWN             	 
+Protect Mode:       	None                	 
+Retention:          	0                   	 
+Location:           	pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db1.db/table_db1	 
+Table Type:         	MANAGED_TABLE       	 
+Table Parameters:	 	 
+	transient_lastDdlTime	1310511133          
+	 	 
+# Storage Information	 	 
+SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
+InputFormat:        	org.apache.hadoop.mapred.TextInputFormat	 
+OutputFormat:       	org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat	 
+Compressed:         	No                  	 
+Num Buckets:        	-1                  	 
+Bucket Columns:     	[]                  	 
+Sort Columns:       	[]                  	 
+Storage Desc Params:	 	 
+	serialization.format	1                   
+PREHOOK: query: show tables
+PREHOOK: type: SHOWTABLES
+POSTHOOK: query: show tables
+POSTHOOK: type: SHOWTABLES
+table_db1
+PREHOOK: query: create database db2 location 'pfile:///Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db2'
+PREHOOK: type: CREATEDATABASE
+POSTHOOK: query: create database db2 location 'pfile:///Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db2'
+POSTHOOK: type: CREATEDATABASE
+PREHOOK: query: describe database extended db2
+PREHOOK: type: DESCDATABASE
+POSTHOOK: query: describe database extended db2
+POSTHOOK: type: DESCDATABASE
+db2		pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db2	
+PREHOOK: query: use db2
+PREHOOK: type: SWITCHDATABASE
+POSTHOOK: query: use db2
+POSTHOOK: type: SWITCHDATABASE
+PREHOOK: query: create table table_db2 (name string, value int)
+PREHOOK: type: CREATETABLE
+POSTHOOK: query: create table table_db2 (name string, value int)
+POSTHOOK: type: CREATETABLE
+POSTHOOK: Output: db2@table_db2
+PREHOOK: query: describe formatted table_db2
+PREHOOK: type: DESCTABLE
+POSTHOOK: query: describe formatted table_db2
+POSTHOOK: type: DESCTABLE
+# col_name            	data_type           	comment             
+	 	 
+name                	string              	None                
+value               	int                 	None                
+	 	 
+# Detailed Table Information	 	 
+Database:           	db2                 	 
+Owner:              	jhoman              	 
+CreateTime:         	Tue Jul 12 15:52:13 PDT 2011	 
+LastAccessTime:     	UNKNOWN             	 
+Protect Mode:       	None                	 
+Retention:          	0                   	 
+Location:           	pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db2/table_db2	 
+Table Type:         	MANAGED_TABLE       	 
+Table Parameters:	 	 
+	transient_lastDdlTime	1310511133          
+	 	 
+# Storage Information	 	 
+SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
+InputFormat:        	org.apache.hadoop.mapred.TextInputFormat	 
+OutputFormat:       	org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat	 
+Compressed:         	No                  	 
+Num Buckets:        	-1                  	 
+Bucket Columns:     	[]                  	 
+Sort Columns:       	[]                  	 
+Storage Desc Params:	 	 
+	serialization.format	1                   
+PREHOOK: query: show tables
+PREHOOK: type: SHOWTABLES
+POSTHOOK: query: show tables
+POSTHOOK: type: SHOWTABLES
+table_db2
+PREHOOK: query: drop table table_db2
+PREHOOK: type: DROPTABLE
+PREHOOK: Input: db2@table_db2
+PREHOOK: Output: db2@table_db2
+POSTHOOK: query: drop table table_db2
+POSTHOOK: type: DROPTABLE
+POSTHOOK: Input: db2@table_db2
+POSTHOOK: Output: db2@table_db2
+PREHOOK: query: use db1
+PREHOOK: type: SWITCHDATABASE
+POSTHOOK: query: use db1
+POSTHOOK: type: SWITCHDATABASE
+PREHOOK: query: drop table table_db1
+PREHOOK: type: DROPTABLE
+PREHOOK: Input: db1@table_db1
+PREHOOK: Output: db1@table_db1
+POSTHOOK: query: drop table table_db1
+POSTHOOK: type: DROPTABLE
+POSTHOOK: Input: db1@table_db1
+POSTHOOK: Output: db1@table_db1
+PREHOOK: query: drop database db2
+PREHOOK: type: DROPDATABASE
+POSTHOOK: query: drop database db2
+POSTHOOK: type: DROPDATABASE
+PREHOOK: query: drop database db1
+PREHOOK: type: DROPDATABASE
+POSTHOOK: query: drop database db1
+POSTHOOK: type: DROPDATABASE
