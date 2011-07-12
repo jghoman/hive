@@ -28,14 +28,14 @@ value               	int                 	None
 # Detailed Table Information	 	 
 Database:           	db1                 	 
 Owner:              	jhoman              	 
-CreateTime:         	Tue Jul 12 15:52:13 PDT 2011	 
+CreateTime:         	Tue Jul 12 16:00:09 PDT 2011	 
 LastAccessTime:     	UNKNOWN             	 
 Protect Mode:       	None                	 
 Retention:          	0                   	 
 Location:           	pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db1.db/table_db1	 
 Table Type:         	MANAGED_TABLE       	 
 Table Parameters:	 	 
-	transient_lastDdlTime	1310511133          
+	transient_lastDdlTime	1310511609          
 	 	 
 # Storage Information	 	 
 SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
@@ -82,14 +82,14 @@ value               	int                 	None
 # Detailed Table Information	 	 
 Database:           	db2                 	 
 Owner:              	jhoman              	 
-CreateTime:         	Tue Jul 12 15:52:13 PDT 2011	 
+CreateTime:         	Tue Jul 12 16:00:10 PDT 2011	 
 LastAccessTime:     	UNKNOWN             	 
 Protect Mode:       	None                	 
 Retention:          	0                   	 
 Location:           	pfile:/Users/jhoman/backupable/repos/li_hive/build/ql/test/data/warehouse/db2/table_db2	 
 Table Type:         	MANAGED_TABLE       	 
 Table Parameters:	 	 
-	transient_lastDdlTime	1310511133          
+	transient_lastDdlTime	1310511610          
 	 	 
 # Storage Information	 	 
 SerDe Library:      	org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe	 
