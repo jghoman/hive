@@ -85,6 +85,7 @@ public class HiveConf extends Configuration {
       HiveConf.ConfVars.METASTORE_CACHE_LEVEL2_TYPE,
       HiveConf.ConfVars.METASTORE_IDENTIFIER_FACTORY,
       HiveConf.ConfVars.METASTORE_PLUGIN_REGISTRY_BUNDLE_CHECK,
+      HiveConf.ConfVars.METASTORE_AUTHORIZATION_STORAGE_AUTH_CHECKS,
       };
 
   /**
@@ -212,7 +213,8 @@ public class HiveConf extends Configuration {
     METASTORE_CACHE_LEVEL2_TYPE("datanucleus.cache.level2.type", "SOFT"),
     METASTORE_IDENTIFIER_FACTORY("datanucleus.identifierFactory", "datanucleus"),
     METASTORE_PLUGIN_REGISTRY_BUNDLE_CHECK("datanucleus.plugin.pluginRegistryBundleCheck", "LOG"),
-      
+    // should we do checks against the storage (usually hdfs) for operations like drop_partition
+    METASTORE_AUTHORIZATION_STORAGE_AUTH_CHECKS("hive.metastore.authorization.storage.checks", false),
 
     // Default parameters for creating tables
     NEWTABLEDEFAULTPARA("hive.table.parameters.default",""),
