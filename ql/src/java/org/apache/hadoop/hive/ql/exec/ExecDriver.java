@@ -1158,12 +1158,15 @@ public class ExecDriver extends Task<MapredWork> implements Serializable {
     // The input file does not exist, replace it by a empty file
     Class<? extends HiveOutputFormat> outFileFormat = null;
     boolean nonNative = true;
+    Properties props;
     if (isEmptyPath) {
       PartitionDesc partDesc = work.getPathToPartitionInfo().get(path);
+      props = partDesc.getProperties();
       outFileFormat = partDesc.getOutputFileFormatClass();
       nonNative = partDesc.getTableDesc().isNonNative();
     } else {
       TableDesc tableDesc = work.getAliasToPartnInfo().get(alias).getTableDesc();
+      props = tableDesc.getProperties();
       outFileFormat = tableDesc.getOutputFileFormatClass();
       nonNative = tableDesc.isNonNative();
     }
@@ -1217,7 +1220,7 @@ public class ExecDriver extends Task<MapredWork> implements Serializable {
 
     String onefile = newPath.toString();
     RecordWriter recWriter = outFileFormat.newInstance().getHiveRecordWriter(job, newFilePath,
-        Text.class, false, new Properties(), null);
+        Text.class, false, props, null);
     recWriter.close(false);
     FileInputFormat.addInputPaths(job, onefile);
     return numEmptyPaths;
